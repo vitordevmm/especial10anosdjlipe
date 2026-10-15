@@ -1,7 +1,6 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root{--event-bg:#07090d;--event-panel:#0e121a;--event-text:#f6f8fc;--event-muted:#a8b2c3;--event-blue:#9bdcff;--event-yellow:#ffe16b;--event-line:rgba(190,215,239,.15)}
 html{scroll-behavior:smooth;scroll-padding-top:90px}.event-site{min-height:100vh;overflow:hidden;background:var(--event-bg);color:var(--event-text);font-family:'DM Sans',sans-serif;padding-bottom:0}.event-site *{box-sizing:border-box}.event-site a{color:inherit;text-decoration:none}
 .announcement-bar{min-height:32px;display:flex;align-items:center;justify-content:center;padding:7px 16px;background:var(--event-blue);color:#07111b;font-size:10px;letter-spacing:.15em;font-weight:800;text-align:center}
