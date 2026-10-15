@@ -30,7 +30,7 @@ function HomePage() {
       <a className="header-account" href="#conta"><UserRound size={17}/> Minha conta</a>
     </header>
     <section className="hero" id="inicio"><div className="hero-content">
-      <div className="eyebrow">EDIÇÃO COMEMORATIVA</div>
+      
       <img className="hero-logo-image" src="/logo-especial-10-anos.svg" alt="Especial 10 Anos DJ Lipe"/>
       <p className="hero-subtitle">10 anos de história. Milhares de momentos.<br/> Uma noite para celebrar tudo isso junto.</p>
       <p className="hero-copy">Uma edição especial para quem fez parte dessa trajetória — e para quem ainda vai viver muita coisa com a gente.</p>
@@ -49,6 +49,5 @@ function HomePage() {
     <dialog id="account-notice" className="notice-dialog"><button className="dialog-close" aria-label="Fechar" onClick={closeAccountNotice}>×</button><span className="dialog-symbol"><ShieldCheck size={26}/></span><h2>Cadastro em preparação</h2><p>O cadastro será liberado quando a autenticação segura e a política de privacidade estiverem configuradas.</p><button className="button button-primary button-full" onClick={closeAccountNotice}>ENTENDI</button></dialog>
     <section className="faq-section section-wrap" id="duvidas"><div className="section-kicker">05 / DÚVIDAS FREQUENTES</div><h2>SEM COMPLICAÇÃO.</h2><details><summary>Quando os ingressos estarão disponíveis?</summary><p>As datas e os valores serão publicados aqui quando forem confirmados oficialmente.</p></details><details><summary>Vou precisar criar uma conta para comprar?</summary><p>A experiência será pensada para você escolher o ingresso primeiro e informar os dados necessários durante o checkout.</p></details><details><summary>Como vou recuperar minha conta?</summary><p>A recuperação de senha será feita pelo e-mail cadastrado quando a autenticação estiver ativa.</p></details></section>
     <footer className="site-footer"><a className="footer-brand" href="#inicio">ESPECIAL <b>DJ LIPE</b> <span>10 ANOS</span></a><p>Uma década de música. Uma noite para ficar na história.</p><div className="footer-bottom"><span>© {new Date().getFullYear()} GHVE Eventos. Todos os direitos reservados.</span><span>Produzido por <b>GHVE EVENTOS</b></span></div></footer>
-    <a className="mobile-sticky-cta" href="#ingressos">QUERO MEU INGRESSO <ArrowRight size={18}/></a>
   </main>;
 }
