@@ -8,19 +8,19 @@ function HomePage() {
   return <main className="event-site">
     <div className="announcement-bar">✦ UMA DÉCADA DE MÚSICA. UMA NOITE PARA FICAR NA HISTÓRIA.</div>
     <header className="site-header">
-      <a className="brand-lockup" href="#inicio"><span className="brand-mark">10<span>ANOS</span></span><span className="brand-name">ESPECIAL <b>DJ LIPE</b></span></a>
+      <a className="brand-lockup" href="#inicio" aria-label="Especial DJ Lipe — início"><img className="header-event-logo" src="/logo-especial-10-anos.svg" alt="Especial 10 Anos DJ Lipe"/></a>
       <nav className="desktop-nav"><a href="#sobre">O especial</a><a href="#experiencia">A experiência</a><a href="#duvidas">Dúvidas</a></nav>
       <a className="header-account" href="#conta"><UserRound size={17}/> Minha conta</a>
     </header>
     <section className="hero" id="inicio"><div className="hero-content">
       <div className="eyebrow">EDIÇÃO COMEMORATIVA</div>
-      <div className="hero-logo"><div className="hero-logo-top">ESPECIAL</div><div className="hero-logo-middle"><span>10</span><small>ANOS</small></div><div className="hero-logo-bottom">DJ LIPE<span>!</span></div></div>
+      <img className="hero-logo-image" src="/logo-especial-10-anos.svg" alt="Especial 10 Anos DJ Lipe"/>
       <p className="hero-subtitle">10 anos de história. Milhares de momentos.<br/> Uma noite para celebrar tudo isso junto.</p>
       <p className="hero-copy">Uma edição especial para quem fez parte dessa trajetória — e para quem ainda vai viver muita coisa com a gente.</p>
       <div className="hero-actions"><a className="button button-primary" href="#ingressos">QUERO MEU INGRESSO <ArrowRight size={19}/></a><a className="button button-secondary" href="#conta"><UserRound size={17}/> Acessar minha conta</a></div>
       <div className="hero-trust"><ShieldCheck size={16}/> Compra segura <i/> <LockKeyhole size={15}/> Seus dados protegidos</div>
     </div><div className="hero-side-note">GHVE EVENTOS • APRESENTA</div></section>
-    <section className="producer-strip"><span className="producer-label">PRODUZIDO POR</span><span className="producer-logo">GHVE <small>EVENTOS</small></span><span className="producer-divider"/><span className="producer-caption">Experiências que viram história.</span></section>
+    <section className="producer-strip"><span className="producer-label">PRODUZIDO POR</span><img className="producer-logo-image" src="/logo-ghve-eventos.svg" alt="GHVE Eventos"/><span className="producer-divider"/><span className="producer-caption">Experiências que viram história.</span></section>
     <section className="intro-section section-wrap" id="sobre"><div className="section-kicker">01 / MAIS QUE UMA FESTA</div><div className="intro-grid"><h2>UMA DÉCADA.<br/><em>INÚMERAS</em><br/>MEMÓRIAS.</h2><div className="intro-text"><p className="intro-lead">Algumas histórias merecem ser celebradas em grande estilo.</p><p>O Especial DJ Lipe — 10 anos de carreira nasce para reunir música, energia e pessoas que fizeram parte dessa caminhada. Uma edição comemorativa para celebrar o que já vivemos e tudo o que ainda vem pela frente.</p><p className="muted-copy">Em breve, mais detalhes sobre a trajetória do Lipe e sobre essa edição especial.</p><a className="text-link" href="#ingressos">Faça parte dessa história <ArrowRight size={17}/></a></div></div></section>
     <section className="experience-section" id="experiencia"><div className="section-wrap"><div className="section-kicker">02 / UMA NOITE ESPECIAL</div><div className="experience-heading"><h2>VOCÊ FAZ PARTE<br/>DESSA <em>HISTÓRIA.</em></h2><p>Uma década de música ao lado de quem viveu — e ainda vai viver — essa energia.</p></div><div className="feature-grid">
       <article className="feature-card"><span className="feature-icon">✦</span><span className="feature-number">01 / ENERGIA</span><h3>Uma noite intensa</h3><p>Uma celebração para reunir pessoas, música e momentos inesquecíveis.</p></article>
