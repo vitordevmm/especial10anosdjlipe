@@ -1,24 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, Check, LockKeyhole, ShieldCheck, Ticket, UserRound } from "lucide-react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
+export const Route = createFileRoute("/")({ component: HomePage });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+function HomePage() {
+  const accountNotice = () => document.getElementById("account-notice")?.showModal();
+  return <main className="event-site">
+    <div className="announcement-bar">✦ UMA DÉCADA DE MÚSICA. UMA NOITE PARA FICAR NA HISTÓRIA.</div>
+    <header className="site-header">
+      <a className="brand-lockup" href="#inicio"><span className="brand-mark">10<span>ANOS</span></span><span className="brand-name">ESPECIAL <b>DJ LIPE</b></span></a>
+      <nav className="desktop-nav"><a href="#sobre">O especial</a><a href="#experiencia">A experiência</a><a href="#duvidas">Dúvidas</a></nav>
+      <a className="header-account" href="#conta"><UserRound size={17}/> Minha conta</a>
+    </header>
+    <section className="hero" id="inicio"><div className="hero-content">
+      <div className="eyebrow">EDIÇÃO COMEMORATIVA</div>
+      <div className="hero-logo"><div className="hero-logo-top">ESPECIAL</div><div className="hero-logo-middle"><span>10</span><small>ANOS</small></div><div className="hero-logo-bottom">DJ LIPE<span>!</span></div></div>
+      <p className="hero-subtitle">10 anos de história. Milhares de momentos.<br/> Uma noite para celebrar tudo isso junto.</p>
+      <p className="hero-copy">Uma edição especial para quem fez parte dessa trajetória — e para quem ainda vai viver muita coisa com a gente.</p>
+      <div className="hero-actions"><a className="button button-primary" href="#ingressos">QUERO MEU INGRESSO <ArrowRight size={19}/></a><a className="button button-secondary" href="#conta"><UserRound size={17}/> Acessar minha conta</a></div>
+      <div className="hero-trust"><ShieldCheck size={16}/> Compra segura <i/> <LockKeyhole size={15}/> Seus dados protegidos</div>
+    </div><div className="hero-side-note">GHVE EVENTOS • APRESENTA</div></section>
+    <section className="producer-strip"><span className="producer-label">PRODUZIDO POR</span><span className="producer-logo">GHVE <small>EVENTOS</small></span><span className="producer-divider"/><span className="producer-caption">Experiências que viram história.</span></section>
+    <section className="intro-section section-wrap" id="sobre"><div className="section-kicker">01 / MAIS QUE UMA FESTA</div><div className="intro-grid"><h2>UMA DÉCADA.<br/><em>INÚMERAS</em><br/>MEMÓRIAS.</h2><div className="intro-text"><p className="intro-lead">Algumas histórias merecem ser celebradas em grande estilo.</p><p>O Especial DJ Lipe — 10 anos de carreira nasce para reunir música, energia e pessoas que fizeram parte dessa caminhada. Uma edição comemorativa para celebrar o que já vivemos e tudo o que ainda vem pela frente.</p><p className="muted-copy">Em breve, mais detalhes sobre a trajetória do Lipe e sobre essa edição especial.</p><a className="text-link" href="#ingressos">Faça parte dessa história <ArrowRight size={17}/></a></div></div></section>
+    <section className="experience-section" id="experiencia"><div className="section-wrap"><div className="section-kicker">02 / UMA NOITE ESPECIAL</div><div className="experience-heading"><h2>VOCÊ FAZ PARTE<br/>DESSA <em>HISTÓRIA.</em></h2><p>Uma década de música ao lado de quem viveu — e ainda vai viver — essa energia.</p></div><div className="feature-grid">
+      <article className="feature-card"><span className="feature-icon">✦</span><span className="feature-number">01 / ENERGIA</span><h3>Uma noite intensa</h3><p>Uma celebração para reunir pessoas, música e momentos inesquecíveis.</p></article>
+      <article className="feature-card"><span className="feature-icon"><Ticket size={22}/></span><span className="feature-number">02 / SEU INGRESSO</span><h3>Escolha sem complicação</h3><p>Compare as opções e conclua a compra com clareza quando as vendas abrirem.</p></article>
+      <article className="feature-card"><span className="feature-icon"><ShieldCheck size={22}/></span><span className="feature-number">03 / TRANQUILIDADE</span><h3>Compra com segurança</h3><p>Informações transparentes e cuidado com seus dados em cada etapa.</p></article>
+    </div></div></section>
+    <section className="tickets-section section-wrap" id="ingressos"><div className="section-kicker">03 / GARANTA SEU LUGAR</div><div className="ticket-panel"><div className="ticket-panel-copy"><span className="ticket-overline">ESPECIAL DJ LIPE • 10 ANOS</span><h2>SUA PRÓXIMA<br/><em>MEMÓRIA COMEÇA AQUI.</em></h2><p>Estamos preparando os detalhes para você escolher seu ingresso com facilidade. Datas, lotes e valores serão publicados assim que forem confirmados.</p></div><div className="ticket-panel-action"><div className="ticket-icon"><Ticket size={29}/></div><strong>Ingressos em breve</strong><span>Volte para conferir as novidades.</span><a className="button button-primary button-full" href="#conta">CRIAR MINHA CONTA <ArrowRight size={18}/></a><small>Deixe seu acesso preparado para quando as vendas abrirem.</small></div></div></section>
+    <section className="account-section" id="conta"><div className="account-inner"><div className="account-copy"><div className="section-kicker">04 / SUA ÁREA</div><h2>DEIXE TUDO<br/><em>PRONTO.</em></h2><p>Crie sua conta para facilitar o acesso aos seus pedidos e ingressos.</p><ul><li><Check size={17}/> Acompanhe pedidos em um só lugar</li><li><Check size={17}/> Recupere o acesso pelo e-mail</li><li><Check size={17}/> Entre com segurança quando voltar</li></ul></div><div className="account-card"><div className="account-card-icon"><UserRound size={22}/></div><h3>Bem-vindo ao especial.</h3><p>Entre na sua conta ou crie seu cadastro para acompanhar as novidades.</p><button className="button button-primary button-full" onClick={accountNotice}>CRIAR CADASTRO <ArrowRight size={18}/></button><button className="button button-quiet button-full" onClick={accountNotice}>Já tenho uma conta</button><div className="account-security"><LockKeyhole size={14}/> Seus dados serão tratados com segurança.</div></div></div></section>
+    <dialog id="account-notice" className="notice-dialog"><button className="dialog-close" aria-label="Fechar" onClick={()=>document.getElementById("account-notice")?.close()}>×</button><span className="dialog-symbol"><ShieldCheck size={26}/></span><h2>Cadastro em preparação</h2><p>Estamos preparando a autenticação segura com Supabase. O cadastro será liberado quando a autenticação e a política de privacidade estiverem configuradas.</p><button className="button button-primary button-full" onClick={()=>document.getElementById("account-notice")?.close()}>ENTENDI</button></dialog>
+    <section className="faq-section section-wrap" id="duvidas"><div className="section-kicker">05 / DÚVIDAS FREQUENTES</div><h2>SEM COMPLICAÇÃO.</h2><details><summary>Quando os ingressos estarão disponíveis?</summary><p>As datas e os valores serão publicados aqui quando forem confirmados oficialmente.</p></details><details><summary>Vou precisar criar uma conta para comprar?</summary><p>A experiência será pensada para você escolher o ingresso primeiro e informar os dados necessários durante o checkout.</p></details><details><summary>Como vou recuperar minha conta?</summary><p>A recuperação de senha será feita pelo e-mail cadastrado quando a autenticação estiver ativa.</p></details></section>
+    <footer className="site-footer"><a className="footer-brand" href="#inicio">ESPECIAL <b>DJ LIPE</b> <span>10 ANOS</span></a><p>Uma década de música. Uma noite para ficar na história.</p><div className="footer-bottom"><span>© {new Date().getFullYear()} GHVE Eventos. Todos os direitos reservados.</span><span>Produzido por <b>GHVE EVENTOS</b></span></div></footer>
+    <a className="mobile-sticky-cta" href="#ingressos">QUERO MEU INGRESSO <ArrowRight size={18}/></a>
+  </main>;
 }
